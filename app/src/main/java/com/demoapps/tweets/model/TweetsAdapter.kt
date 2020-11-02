@@ -1,12 +1,18 @@
 package com.demoapps.tweets.model
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.demoapps.tweets.R
+import com.demoapps.tweets.asynctask.GetImages
 import kotlinx.android.synthetic.main.tweet_item_layout.view.*
+import java.net.URL
+
 
 class TweetsAdapter(private val context: Context,
                     private val tweetsList: List<TweetsData>): RecyclerView.Adapter<TweetsAdapter.ViewHolder>(){
@@ -24,11 +30,12 @@ class TweetsAdapter(private val context: Context,
         holder.tweetFavCount.text = tweetsList.get(position).favoriteCount
         holder.tweetReTweetCount.text = tweetsList.get(position).retweetCount
         holder.tweetDescription.text = tweetsList.get(position).text
-        //holder.tweetImage.setImageBitmap(getImageFromUrl(tweetsList.get(position).profileImageUrl))
+        getImageFromUrl(tweetsList.get(position).profileImageUrl, holder.tweetImage)
     }
 
-    private fun getImageFromUrl(url: String){
-
+    private fun getImageFromUrl(imageUrl: String, tweetImage: ImageView) {
+        val getImages = GetImages(tweetImage)
+        getImages.execute(imageUrl)
 
     }
 

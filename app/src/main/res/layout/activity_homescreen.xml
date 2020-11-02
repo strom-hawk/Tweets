@@ -25,7 +25,7 @@
             android:padding="@dimen/dp_5">
 
             <EditText
-                android:id="@+id/etCity"
+                android:id="@+id/etSearchTweetText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
@@ -35,10 +35,12 @@
                 android:paddingStart="@dimen/dp_10"
                 android:paddingEnd="@dimen/dp_10"
                 android:textColor="@color/deep_sky"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:singleLine="true"
+                android:imeOptions="actionGo"/>
 
             <ImageButton
-                android:id="@+id/getWeaterButton"
+                android:id="@+id/searchTweetButton"
                 android:layout_width="@dimen/dp_50"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
@@ -59,10 +61,37 @@
         tools:listitem="@layout/tweet_item_layout"
         tools:itemCount="4">
 
-
     </androidx.recyclerview.widget.RecyclerView>
 
+    <RelativeLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_weight="0.9">
 
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noTweetsError"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_weight="0.9">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_tweets_found"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="#424242"/>
+
+    </RelativeLayout>
 
 
     </LinearLayout>
