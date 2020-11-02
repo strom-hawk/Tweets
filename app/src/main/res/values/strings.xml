@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tweets</string>
+    <string name="something_went_wrong">Something went wrong</string>
+
+    <string name="tweets_search_box_hint">Enter Text</string>
+
+    <string name="alert_title">Alert !</string>
+    <string name="alert_message">Alert message</string>
+    <string name="positive_button">OK</string>
+    <string name="negative_button">Negative Button</string>
+
+</resources>
