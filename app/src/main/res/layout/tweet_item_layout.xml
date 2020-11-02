@@ -10,7 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5">
 
         <ImageView
             android:id="@+id/tweetImage"
@@ -99,6 +102,9 @@
         android:layout_height="wrap_content"
         android:text="sdafsafsadfdsafasdfasdsfa"
         android:layout_marginTop="@dimen/dp_10"
-        android:textColor="#424242"/>
+        android:textColor="#424242"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"/>
 
 </LinearLayout>

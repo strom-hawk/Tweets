@@ -75,8 +75,9 @@ class HomeScreen : ActivityBase(), TweetsFlowCallBack {
             }else{
                 searchedTweetsList.clear()
                 for(tweets in tweetsList){
-                    if(tweets.name.contains(etSearchTweetText.text, ignoreCase = true)
-                        || tweets.text.contains(etSearchTweetText.text, ignoreCase = true)){
+                    if(tweets.name.contains(etSearchTweetText.text, ignoreCase = true)||
+                        tweets.handle.contains(etSearchTweetText.text, ignoreCase = true) ||
+                        tweets.text.contains(etSearchTweetText.text, ignoreCase = true)){
                         searchedTweetsList.add(tweets)
                     }
                 }

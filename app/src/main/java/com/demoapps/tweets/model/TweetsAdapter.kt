@@ -10,6 +10,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.demoapps.tweets.R
 import com.demoapps.tweets.asynctask.GetImages
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.tweet_item_layout.view.*
 import java.net.URL
 
@@ -30,7 +31,8 @@ class TweetsAdapter(private val context: Context,
         holder.tweetFavCount.text = tweetsList.get(position).favoriteCount
         holder.tweetReTweetCount.text = tweetsList.get(position).retweetCount
         holder.tweetDescription.text = tweetsList.get(position).text
-        getImageFromUrl(tweetsList.get(position).profileImageUrl, holder.tweetImage)
+        //getImageFromUrl(tweetsList.get(position).profileImageUrl, holder.tweetImage)
+        Picasso.get().load(tweetsList.get(position).profileImageUrl).resize(50, 50).into(holder.tweetImage);
     }
 
     private fun getImageFromUrl(imageUrl: String, tweetImage: ImageView) {
