@@ -24,6 +24,12 @@ class TweetsAdapter(private val context: Context,
         holder.tweetFavCount.text = tweetsList.get(position).favoriteCount
         holder.tweetReTweetCount.text = tweetsList.get(position).retweetCount
         holder.tweetDescription.text = tweetsList.get(position).text
+        //holder.tweetImage.setImageBitmap(getImageFromUrl(tweetsList.get(position).profileImageUrl))
+    }
+
+    private fun getImageFromUrl(url: String){
+
+
     }
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -32,5 +38,6 @@ class TweetsAdapter(private val context: Context,
         val tweetFavCount = itemView.tweetFavCount
         val tweetReTweetCount = itemView.tweetReTweetCount
         val tweetDescription = itemView.tweetDescription
+        val tweetImage = itemView.tweetImage
     }
 }
