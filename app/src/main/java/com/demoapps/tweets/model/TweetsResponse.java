@@ -10,13 +10,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 public class TweetsResponse {
-    @SerializedName("message")
+    @SerializedName("success")
     @Expose
     private String txnMessage;
 
-    @SerializedName("cod")
+    @SerializedName("data")
     @Expose
-    private String txnStatus;
+    private ArrayList<TweetsData> data;
 
     //getter txnMessage
     public String getTxnMessage() {
@@ -28,13 +28,13 @@ public class TweetsResponse {
         this.txnMessage = txnMessage;
     }
 
-    //getter txnStatus
-    public String getTxnStatus() {
-        return txnStatus;
+    //getter data
+    public ArrayList<TweetsData> getData() {
+        return data;
     }
 
-    //setter txnStatus
-    public void setTxnStatus(String txnStatus) {
-        this.txnStatus = txnStatus;
+    //setter data
+    public void setData(ArrayList<TweetsData> data) {
+        this.data = data;
     }
 }

@@ -47,8 +47,21 @@
                 android:src="@drawable/ic_baseline_search_24" />
 
         </RelativeLayout>
-
     </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTweets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        tools:listitem="@layout/tweet_item_layout"
+        tools:itemCount="4">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 
 
